@@ -1,0 +1,32 @@
+﻿@Model List <Carcenterweb.Models.DTO.DominiosDTO>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Dominios</h2>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <table class=" table-bordered table-responsive">
+                <tr>
+                    <th>
+                        <ht>Tipo Dominio</ht>
+                        <ht>Id  Dominio</ht>
+                        <ht>Valor Dominio</ht>
+
+                   </th>
+                </tr>
+
+                @foreach (var oDominio in Model) { 
+                    <tr>
+                        <td>@oDominio.TipoDominio</td>
+                        <td>@oDominio.IdDominio</td>
+                        <td>@oDominio.VlrDominio</td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+
+
