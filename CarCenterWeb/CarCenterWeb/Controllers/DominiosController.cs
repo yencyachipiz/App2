@@ -29,6 +29,13 @@ namespace CarCenterWeb.Controllers
 
                 return View(LstDominios);
             }
+
+        }
+        //metedo que  llama al formulario  de insercion
+        [HttpGet]
+        public ActionResult Add() {
+            return View();
         }
     }
+
 }
