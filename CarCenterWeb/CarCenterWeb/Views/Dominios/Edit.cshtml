@@ -1,30 +1,37 @@
-﻿@model CarCenterWeb.Models.DTOs.DominiosDTO
+﻿
 @{
-    ViewBag.Title = "Agregar Dominio";
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+ @model CarCenterWeb.Models.DTOs.DominiosDTO
+@{
+    ViewBag.Title = "Edit Dominio";
 }
 
 <h2> ViewBag.Title</h2>
 <div class="row">
     <div class="col-md-12">
-        <!-- 
-            inicio del formulario de inser4cion 
+        <!--
+            inicio del formulario de inser4cion
             params (->ACCION , 2 -> controller, 3 ->Method 4->paramsu
 
-        @using (Html.BeginForm("Add", "Dominios", FormMethod.Post, new { role = "form" }))// creamos el formulario  a traves de razon
+        @using (Html.BeginForm("Edit", "Dominios", FormMethod.Post, new { role = "form" }))// creamos el formulario  a traves de razon
         {
 
             <!-- helper de segurida para evitar invocaciones al dorm  desde fuera de app-->
-            @Html.AntiForgeryToken()
+        @Html.AntiForgeryToken()
 
             <!-- helper para mostrar mensaje de erro producidos por data annatatons -->
-            @Html.ValidationMessage("error",new {@class="text-danger"})
+        @Html.ValidationMessage("error", new { @class = "text-danger" })
 
             <!-- mostrar label  para el atributo tipo dominio tal como se  esecifico en el data annotations -->
 
-            @Html.LabelFor(d => d.TipoDominio)
-            @Html.LabelFor(d => d.TipoDominio, new { @class = "form-control" })
-            @Html.ValidationMessage("TipoDominio", new { @class = "text-danger"})
-            <br />
+        @Html.LabelFor(d => d.TipoDominio)
+        @Html.LabelFor(d => d.TipoDominio, new { @class = "form-control" })
+        @Html.ValidationMessage("TipoDominio", new { @class = "text-danger" })
+        <br />
 
             @Html.LabelFor(d => d.IdDominio)
             @Html.LabelFor(d => d.IdDominio, new { @class = "form-control" })
@@ -40,10 +47,10 @@
                 <input type="submit" class="btn btn-sucess" value="guardar" />
 
             </div>
-        }
+}
 
 
-    </div>
+</div>
 
 </div>
 

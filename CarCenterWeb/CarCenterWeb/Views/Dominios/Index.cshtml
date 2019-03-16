@@ -6,6 +6,14 @@
 <h2>Dominios</h2>
 
     <div class="row">
+        <div class="col-md-12">
+            <input type="button" class="btn btn -primary" value="Nuevo"
+                   onclick="document.location.href='@Url.Content("~/Dominios/Add")'"/>
+        </div>
+        
+    </div>
+
+    <div class="row">
         <div class="col-lg-12">
             <table class=" table-bordered table-responsive">
                 <tr>
@@ -13,6 +21,7 @@
                         <ht>Tipo Dominio</ht>
                         <ht>Id  Dominio</ht>
                         <ht>Valor Dominio</ht>
+                        <ht> Acciones</ht>
 
                    </th>
                 </tr>
@@ -22,11 +31,25 @@
                         <td>@oDominio.TipoDominio</td>
                         <td>@oDominio.IdDominio</td>
                         <td>@oDominio.VlrDominio</td>
-                    </tr>
+                        <td>
+                            <input type="button" value="editar" class=" btn btn-default"
+                                   onclick="document.location.href= '@Url.Content("~/Dominios/Edit/tipoDominio="+oDominio.tipoDominio+
+                                                                    "&idDominio="+oDominio.IdDominio)'"/>
+
+                            <input type="button" value="ELIMINAR" class="btn btn danger"
+                                   onclick="jsDelete('@oDominio.tipoDominio','@oDominio.IdDominio');"/>
+                        </td>
+                    </tr> 
+
                 }
             </table>
         </div>
 
     </div>
+    <script>
+        function jsDelete(tipo, id) {
+
+        }
+    </script>
 
 
